@@ -3,6 +3,9 @@
   --white: hsl(0, 0%, 100%);
   --gray-500: hsl(0, 0%, 42%);
   --gray-950: hsl(0, 0%, 7%);
+  --fs-small: clamp(12px, 3.2vw, 14px);
+  --fs-medium: clamp(14px, 3.73vw, 16px);
+  --fs-large: clamp(20px, 5.33vw, 24px);
 }
 
 *,
@@ -26,7 +29,7 @@ body {
   min-height: 100vh;
   background-color: var(--yellow);
   font-family: 'Figtree', sans-serif;
-  font-size: clamp(14px, 3.73vw, 16px);
+  font-size: var(--fs-medium);
   font-weight: 500;
 }
 
@@ -58,20 +61,20 @@ body {
   border-radius: 4px;
   padding: 4px 12px;
   background-color: var(--yellow);
-  font-size: clamp(12px, 3.2vw, 14px);
+  font-size: var(--fs-small);
   font-weight: 800;
   line-height: 1.5;
   color: var(--gray-950);
 }
 
 .card-content .published {
-  font-size: clamp(12px, 3.2vw, 14px);
+  font-size: var(--fs-small);
   line-height: 1.5;
   color: var(--gray-950);
 }
 
 .card-content .title {
-  font-size: clamp(20px, 5.33vw, 24px);
+  font-size: var(--fs-large);
   font-weight: 800;
   line-height: 1.5;
 }
@@ -104,7 +107,7 @@ body {
 }
 
 .author-avatar figcaption {
-  font-size: clamp(12px, 3.2vw, 14px);
+  font-size: var(--fs-small);
   font-weight: 800;
   line-height: 1.5;
   color: var(--gray-950);
