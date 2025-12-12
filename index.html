@@ -3,46 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Blog preview card</title>
+    <meta
+      name="description"
+      content="A blog preview card that can be used to showcase articles on a website."
+    />
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <title>Frontend Mentor | Blog preview card</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <main>
       <article class="card">
         <img
-          class="card-img"
+          class="syntax-illustration"
           src="./assets/images/illustration-article.svg"
           alt="Illustration representing HTML closing and opening tags and CSS square brackets"
+          fetchpriority="high"
         />
         <div class="card-content">
-          <div class="badge">Learning</div>
-          <p class="published">Published 21 Dec 2023</p>
-          <h1 class="title">
-            <a href="#" class="title-link">HTML & CSS foundations</a>
+          <div class="blog-category">Learning</div>
+          <p class="blog-published">Published 21 Dec 2023</p>
+          <h1 class="blog-title">
+            <a
+              class="blog-title-link"
+              href="https://www.w3schools.com/htmlcss/default.asp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              HTML & CSS foundations
+            </a>
           </h1>
-          <p class="description">
+          <p class="blog-description">
             These languages are the backbone of every website, defining
             structure, content, and presentation.
           </p>
         </div>
-        <figure class="author-avatar">
+        <figure class="blog-author">
           <img
+            class="blog-author-avatar"
             src="./assets/images/image-avatar.webp"
             alt="Headshot of Greg Hooper"
           />
-          <figcaption>Greg Hooper</figcaption>
+          <figcaption class="blog-author-name">Greg Hooper</figcaption>
         </figure>
       </article>
     </main>

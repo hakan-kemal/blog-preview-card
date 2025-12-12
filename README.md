@@ -24,7 +24,7 @@ This project showcases a modern blog card designed with hover effects, fluid typ
 - Flexbox
 - Mobile-first workflow
 - Fluid typography using `clamp()`
-- [Figtree](./assets/fonts/) - Google Font (local files)
+- [Figtree](./assets/fonts/) - Local font files with `@font-face`
 
 ### What I Learned
 
@@ -34,9 +34,9 @@ This project helped me explore several interesting CSS concepts:
 
 ```css
 :root {
-  --fs-small: clamp(12px, 3.2vw, 14px);
-  --fs-medium: clamp(14px, 3.73vw, 16px);
-  --fs-large: clamp(20px, 5.33vw, 24px);
+  --font-size-small: clamp(12px, 3.2vw, 14px);
+  --font-size-medium: clamp(14px, 3.73vw, 16px);
+  --font-size-large: clamp(20px, 5.33vw, 24px);
 }
 ```
 
@@ -46,20 +46,24 @@ Using `clamp()` for font sizes creates truly responsive typography that scales s
 
 ```css
 :root {
-  --yellow: hsl(47, 88%, 63%);
-  --gray-950: hsl(0, 0%, 7%);
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-gray-950: hsl(0, 0%, 7%);
+  --spacing-300: 1.5rem;
+  --radius-base: 1.25rem;
 }
 ```
 
 **Modern CSS Nesting:** Utilized native CSS nesting for hover states, keeping related styles together:
 
 ```css
-.title-link {
-  color: var(--gray-950);
+.blog-title-link {
+  color: var(--color-gray-950);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
 
   &:hover,
   &:focus {
-    color: var(--yellow);
+    color: var(--color-yellow);
   }
 }
 ```
@@ -68,8 +72,9 @@ Using `clamp()` for font sizes creates truly responsive typography that scales s
 
 ```css
 .card {
-  box-shadow: 8px 8px 0 rgba(0, 0, 0, 1);
-  border: 1px solid var(--gray-950);
+  box-shadow: var(--shadow-base);
+  border: 0.0625rem solid var(--color-gray-950);
+  border-radius: var(--radius-base);
 }
 ```
 
